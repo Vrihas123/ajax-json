@@ -1,0 +1,11 @@
+[
+    {   "name":"Cristiano Ronaldo", "club":"Real Madrid", "country":"Portugal"  },
+    {   "name":"Lionel Messi", "club":"Barcelona", "country":"Argentina"  },
+    {   "name":"Antoine Griezmann", "club":"Athletico Madrid", "country":"France"  },
+    {   "name":"Neymar Jr", "club":"PSG", "country":"Brazil"  },
+    {   "name":"Harry Kane", "club":"Tottenham Hotspur", "country":"England"  },
+    {   "name":"Marcelo", "club":"Real Madrid", "country":"Brazil"  },
+    {   "name":"Paulo Dybala", "club":"Juventus", "country":"Argentina"  },
+    {   "name":"Zlatan Ibrahimovic", "club":"Manchester United", "country":"Sweden"  },
+    {   "name":"Sunil Chhetri", "club":"Bengaluru FC", "country":"India"  }
+]
