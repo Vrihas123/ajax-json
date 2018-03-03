@@ -29,46 +29,27 @@ function renderHTML(data) {
 }
 
 function myFunction() {
-    var input, filter, table, tr, td, td1, td2, i;
+    var input,filter,table,tr,td,firstCol,secondCol,thirdCol;
     input = document.getElementById("myInput");
-    filter = input.value.toUpperCase;
+    filter = input.value.toUpperCase();
     table = document.getElementById("info");
     tr  = table.getElementsByTagName("tr");
-    var count = 9;
-    
+    var count = 0;
     for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-				td = tr[i].getElementsByTagName("td")[1];
-    		if (td) {
-      		if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        		tr[i].style.display = "";
-      		} else {
-						td = tr[i].getElementsByTagName("td")[2];
-    					if (td) {
-      					if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        					tr[i].style.display = "";
-      					} else {
-										td = tr[i].getElementsByTagName("td")[3];
-    									if (td) {
-      									if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        								tr[i].style.display = "";
-      										} else {
-        										tr[i].style.display = "none";
-												count--;
-											}
-    										}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-					document.getElementById("count").innerHTML= count;
-				}
+       var td = tr[i].getElementsByTagName("td")[0];
+           var td1 = tr[i].getElementsByTagName("td")[1];
+              var td2 = tr[i].getElementsByTagName("td")[2];
+            if (td+td1+td2) {
+              if ((td.innerHTML.toUpperCase().indexOf(filter)+td1.innerHTML.toUpperCase().indexOf(filter)+td2.innerHTML.toUpperCase().indexOf(filter)) > -3) {
+                tr[i].style.display = ""; 
+                count++;
+                   document.getElementById('count').innerHTML=count;
+              } else {
+                tr[i].style.display = "none";
+                document.getElementById('count').innerHTML=count;
+              }    
+        }
+      }
+}
    
     
